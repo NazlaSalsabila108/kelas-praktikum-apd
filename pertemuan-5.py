@@ -1,48 +1,84 @@
-# ulang = 10
-# for i in range(ulang) :
-#     print("Perulangan ke-" + str(i))
+# nama = ["nazla", 108, True,] ["yuyun", 145], 3.96,[123,"ALVITO", False, 3.66],"rehan"
+# matkul = [  "APD", 
+#             "APL",
+#             "WEB",
+#             "JARKOM",
+#             "BASDAT",
+#             "STRUKDAT",
+#             "PTI",
+#             "KALKULUS",
+#             "PROBAS"]
 
-# for i in range(2,10) :
-#     print(f"halo {i}")
+# print(matkul[6])
 
-# for i in range(2,10,2) :
-#     print(f"halo {i}")
+# makanan = ["Bakso","Sate","Soto", "nasi goreng", "mie ayam", "cumi bakar", "ayam bakar"]
+# print("Sebelum: ")
+# print(makanan[2:5])
+# makanan.append ("Nasi Goreng")
+# print("Sesudah: ")
+# del makanan [5]
+# data = makanan.pop(5)
+# print(makanan)
+# print(data)
+# print(makanan)
+# makanan.insert(3,"Nasi Goreng")
+# makanan[0] = ["ayam goreng", "bebek goreng"]
+# print(makanan)
 
-# for i in range(1, 4):
-#     for j in range(1, 4):
-#         print(f"{i} x {j} = {i * j}")
-#     print()
+# # minuman 6. 3(dihapus) 6(air putih) 1(jus tomat)
 
-# jawab = 'ya'
-# hitung = 0
-# while(jawab == 'ya'):
-#     hitung = hitung + 1
-#     jawab = input("Ulang lagi tidak?")
-#     print(f"Total perulangan: {hitung}")
+# minuman=["Pocari","Josu","Es teler","Es teh jumbo","Bintang","Minuman Anak-anak"]
+# print("Sebelum: ")
+# print(minuman)
+# del minuman [2]
+# print("Sesudah: ")
+# print(minuman)
+# minuman[4]="air putih"
+# print(minuman)
+# minuman.insert(0,"jus tomat")
+# print(minuman)
 
-# while True:
-#     print("halo")
+# makanan = ["ayam", "ikan",["bakso","soto","sate","ikan","bebek"],
+#            ["teh","kopi","air"]]
 
-# hitung = 0
-# while True:
-#     hitung += 1
-#     ulang = input("Masih Ingin Mengulang? ")
-#     if ulang == "tidak" or ulang =="Tidak":
-#         break
+# for i in makanan:
+#     for j in i :
+#         print(j, end=", ")
 
-# print(f"Total Perulangan: {hitung}")
-# while True:
-#     print("halo")
-#     break
+# for i in makanan :
+#     if isinstance(i, list):
+#         for j in i :
+#             print(j)
+#     else:
+#         print(i)
 
-print("Daftar bilangan ganjil dari 1-10")
-for i in range(10):
-    if i % 2 == 0:
-        continue
-    print(i)
+# for i in makanan:
+#     for j in i :
+#         print(i)
 
-# kelasC = ["nazla", 2409106108]
+akuns = []
 
-# for i in range(len(kelasC)):
-#     print(f"{i+1}. {kelasC[i]}")
-# print(kelasC)
+while True: 
+    print("Halo! Selamat datang di aplikasi catatan")
+    print("Silahkan pilih 'Daftar akun' jika belum buat akun, dan jika sudah memiliki akun silahkan 'Login'")
+    print("1. Daftar akun")
+    print("2. Login")
+    print("3. Exit")
+    print("_________________________")
+    opsi = input("Pilih opsi: ")
+    print(" ")
+
+    if opsi == "1":
+        print("Halo Pengguna baru! Ayo buat akun dulu")
+        Username = input("Username: ")
+        akuna = False
+        for akun in akuns:
+            if akun[0] == Username: #Memeriksa apakah username sudah ada 
+                akuna = True
+                break
+        if akuna:
+            print("Nama Sudah Terpakai Untuk Registrasi Silahkan Coba Lagi")
+        else:
+            password = input("Password: ")
+            akuns.append([Username, Password,[]]) #Simpan username, password, dan catatan (sebagai list kosong)
+            print(f"Akun anda berhasil terdaftar dengan ID: {Username}")
